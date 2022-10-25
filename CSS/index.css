@@ -1,0 +1,168 @@
+body {
+  background-color: #e5effa;
+}
+
+.main {
+  width: 42%;
+  margin: 30px auto 0px auto;
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h2 {
+  color: #1c202b;
+}
+
+header p {
+  color: #939dae;
+}
+
+#all-read {
+  color: #5e6778;
+  cursor: pointer;
+}
+
+#all-read:hover {
+  color: #0a317b;
+}
+
+#count {
+  background-color: #0a317b;
+  color: white;
+  font-size: 16px;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+main {
+  margin-top: 10px;
+}
+
+.notification-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.unread {
+  background-color: #f7fafd;
+  margin-bottom: 10px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figure img {
+  width: 45px;
+}
+
+figcaption {
+  margin-left: 20px;
+}
+
+figcaption p {
+  color: #1c202b;
+  margin: 0;
+}
+
+.notification-time {
+  color: #939dae;
+  margin-top: 5px;
+}
+
+.name,
+.content-link {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.name:hover,
+.content-link:hover {
+  color: #0a317b;
+}
+
+.name {
+  color: #1c202b;
+}
+
+.content-link {
+  color: #5e6778;
+}
+
+#red-circle {
+  background-color: #f65351;
+  color: red;
+  font-size: 6px;
+  padding: 2px 4px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.comment-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.comment-notification figure {
+  position: absolute;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.comment-notification figure img {
+  border: 4px solid white;
+}
+
+.comment-notification figure:hover img {
+  border: 4px solid #e5effa;
+  border-radius: 10px;
+}
+
+.private-msg {
+  border: 1px solid #939dae;
+  border-radius: 5px;
+  margin: 0 0 10px 85px;
+  padding: 15px;
+}
+
+.private-msg p {
+  margin: 0px;
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 0 15px;
+    width: 100%;
+  }
+  .comment-notification figure {
+    position: relative;
+  }
+}
+/*# sourceMappingURL=index.css.map */

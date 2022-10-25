@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      margin-top: 20px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <section class="main">
+
+    <header>
+
+      <div>
+        <h2>
+          Notifications
+          <span id="count">
+
+          </span>
+        </h2>
+      </div>
+
+      <div>
+        <p id="all-read">Mark all read</p>
+      </div>
+
+    </header>
+
+    <main>
+
+      <section class="notification-section unread" onclick="getIndex(0)">
+
+        <figure>
+          <img src="images/avatar-mark-webber.webp" alt="Mark Webber">
+        </figure>
+
+        <figcaption>
+
+          <div>
+
+            <p>
+              <a href="Javascript:void(0)" class="name">Mark Webber</a> reacted to your recent post
+              <a href="Javascript:void(0)" class="content-link">My first tournament today!</a>
+
+              <span id="red-circle">
+                x
+              </span>
+
+            </p>
+
+
+
+          </div>
+
+          <p class="notification-time">
+            1m ago
+          </p>
+
+        </figcaption>
+
+      </section>
+
+      <section class="notification-section unread" onclick="getIndex(1)">
+
+        <figure>
+          <img src="images/avatar-angela-gray.webp" alt="Angela Grey">
+        </figure>
+
+        <figcaption>
+
+          <div>
+
+            <p>
+              <a href="Javascript:void(0)" class="name">Angela Grey</a> followed you
+
+              <span id="red-circle">
+                x
+              </span>
+            </p>
+
+
+
+          </div>
+
+          <p class="notification-time">
+            5m ago
+          </p>
+
+        </figcaption>
+
+      </section>
+
+      <section class="notification-section unread" onclick="getIndex(2)">
+
+        <figure>
+          <img src="images/avatar-jacob-thompson.webp" alt="Jacob Thompson">
+        </figure>
+
+        <figcaption>
+
+          <div>
+
+            <p>
+              <a href="Javascript:void(0)" class="name">Jacob Thompson</a> has joined your group
+              <a href="Javascript:void(0)" class="content-link" style="color: hsl(219, 85%, 26%);"> Chess Club
+              </a>
+
+              <span id="red-circle">
+                x
+              </span>
+            </p>
+
+
+          </div>
+
+          <p class="notification-time">
+            1 day ago
+          </p>
+
+        </figcaption>
+
+      </section>
+
+      <section>
+
+        <div class="notification-section" style="margin: 0; padding-bottom: 0;">
+          <figure>
+            <img src="images/avatar-jacob-thompson.webp" alt="Jacob Thompson">
+          </figure>
+
+          <figcaption>
+
+            <div class="content">
+
+              <p>
+                <a href="Javascript:void(0)" class="name">Rizky Hasanuddin </a> sent you a private message
+              </p>
+
+            </div>
+
+            <p class="notification-time">
+              5 day ago
+            </p>
+
+          </figcaption>
+
+        </div>
+
+        <div class="private-msg">
+          <p>
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.
+          </p>
+        </div>
+
+
+      </section>
+
+      <section class="notification-section">
+
+        <figure>
+          <img src="images/avatar-kimberly-smith.webp" alt="Kimberly Smith">
+        </figure>
+
+        <figcaption class="comment-notification">
+
+          <div>
+
+            <div class="content">
+
+              <p>
+                <a href="Javascript:void(0)" class="name">Kimberly Smith</a> commented on your picture
+              </p>
+
+            </div>
+
+            <p class="notification-time">
+              1 week ago
+            </p>
+
+          </div>
+
+          <figure>
+            <img src="images/image-chess.webp" alt="img">
+          </figure>
+
+        </figcaption>
+
+      </section>
+
+      <section class="notification-section">
+
+        <figure>
+          <img src="images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
+        </figure>
+
+        <figcaption>
+
+          <div class="content">
+
+            <p>
+              <a href="Javascript:void(0)" class="name">Nathan Peterson</a> reacted to your recent post
+              <a href="Javascript:void(0)" class="content-link">5 end-game strategies to increase your win rate</a>
+
+            </p>
+
+
+
+          </div>
+
+          <p class="notification-time">
+            2 week ago
+          </p>
+
+        </figcaption>
+
+      </section>
+
+      <!-- Last section -->
+      <section class="notification-section">
+
+        <figure>
+          <img src="images/avatar-anna-kim.webp" alt="Anna Kim ">
+        </figure>
+
+        <figcaption>
+
+          <div class="content">
+
+            <p>
+              <a href="Javascript:void(0)" class="name">Anna Kim</a>left the group
+
+              <a href="Javascript:void(0)" class="content-link" style="color: hsl(219, 85%, 26%);"> Chess Club<a>
+            </p>
+
+          </div>
+
+          <p class="notification-time">
+            2 weeks ago
+          </p>
+
+        </figcaption>
+
+      </section>
+
+    </main>
+
+  </section>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Abhishek Shrestha</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

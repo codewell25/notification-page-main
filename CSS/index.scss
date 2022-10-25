@@ -1,0 +1,183 @@
+//Primary
+
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+///Neutral
+
+$White: hsl(0, 0%, 100%);
+$Very_light_grayish_blue: hsl(210, 60%, 98%);
+$Light_grayish_blue_1: hsl(211, 68%, 94%);
+$Light_grayish_blue_2: hsl(205, 33%, 90%);
+$Grayish_blue: hsl(219, 14%, 63%);
+$Dark_grayish_blue: hsl(219, 12%, 42%);
+$Very_dark_blue: hsl(224, 21%, 14%);
+
+body {
+    background-color: $Light_grayish_blue_1;
+}
+
+.main {
+    width: 42%;
+    margin: 30px auto 0px auto;
+    padding: 0 20px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        color: $Very_dark_blue;
+    }
+
+    p {
+        color: $Grayish_blue;
+    }
+}
+
+#all-read {
+    color: $Dark_grayish_blue;
+    cursor: pointer;
+
+    &:hover {
+        color: $Blue;
+    }
+}
+
+#count {
+    background-color: $Blue;
+    color: white;
+    font-size: 16px;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+main {
+    margin-top: 10px;
+}
+
+.notification-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    border-radius: 10px;
+
+}
+
+.unread {
+    background-color: $Very_light_grayish_blue;
+    margin-bottom: 10px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 45px;
+    }
+}
+
+figcaption {
+
+    margin-left: 20px;
+
+    p {
+        color: $Very_dark_blue;
+        margin: 0;
+    }
+}
+
+
+
+.notification-time {
+    color: $Grayish_blue;
+    margin-top: 5px;
+}
+
+.name,
+.content-link {
+    font-weight: 800;
+    text-decoration: none;
+
+    &:hover {
+        color: $Blue;
+    }
+}
+
+.name {
+    color: $Very_dark_blue;
+
+}
+
+.content-link {
+    color: $Dark_grayish_blue;
+}
+
+
+#red-circle {
+
+    background-color: $Red;
+    color: red;
+    font-size: 6px;
+    padding: 2px 4px;
+    border-radius: 50%;
+
+    margin-left: 10px;
+}
+
+.comment-notification {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    figure {
+        position: absolute;
+        right: 0;
+        box-sizing: border-box;
+
+        img {
+            border: 4px solid white;
+        }
+
+        &:hover {
+            img {
+                border: 4px solid $Light_grayish_blue_1;
+                border-radius: 10px;
+            }
+        }
+    }
+
+}
+
+.private-msg {
+    border: 1px solid $Grayish_blue;
+    border-radius: 5px;
+    margin: 0 0 10px 85px;
+    padding: 15px;
+
+    p {
+        margin: 0px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .main {
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .comment-notification {
+        figure {
+            position: relative;
+        }
+    }
+}
